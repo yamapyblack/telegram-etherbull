@@ -69,13 +69,13 @@ function App() {
         </div>
       </div>
       <h2 style={{ fontSize: "32px" }}>TAP ↑↑↑</h2>
-      <div className="card">
+      {/* <div className="card">
         <button
           onClick={() => WebApp.showAlert(`Congrats! ETH will be $${count}!`)}
         >
           Exit
         </button>
-      </div>
+      </div> */}
     </>
   );
 }
