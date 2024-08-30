@@ -31,7 +31,14 @@ function App() {
   };
 
   return (
-    <>
+    <div
+      style={{
+        userSelect: "none", // Add this line to prevent text selection
+        WebkitUserSelect: "none", // For webkit browsers
+        MozUserSelect: "none", // For Firefox
+        msUserSelect: "none", // For IE/Edge
+      }}
+    >
       <h1>ETHER BULL</h1>
       <h2 className="eth">
         <span>ETH</span> will be
@@ -76,7 +83,7 @@ function App() {
           Exit
         </button>
       </div> */}
-    </>
+    </div>
   );
 }
 
