@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import WebApp from "@twa-dev/sdk";
+// import WebApp from "@twa-dev/sdk";
 
 function App() {
   const [count, setCount] = useState(0);
