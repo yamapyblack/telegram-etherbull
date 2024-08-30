@@ -71,9 +71,7 @@ function App() {
       <h2 style={{ fontSize: "32px" }}>TAP ↑↑↑</h2>
       <div className="card">
         <button
-          onClick={() =>
-            WebApp.showAlert(`Hello World! Current count is ${count}`)
-          }
+          onClick={() => WebApp.showAlert(`Congrats! ETH will be $${count}!`)}
         >
           Exit
         </button>
