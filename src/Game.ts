@@ -100,11 +100,18 @@ const config: Phaser.Types.Core.GameConfig = {
   // height: 600,
   scale: {
     mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
+    // autoCenter: Phaser.Scale.CENTER_BOTH,
     parent: "phaser",
     width: "1160",
     height: "2040",
-    // orientation: Phaser.Scale.Orientation.PORTRAIT,
+    // min: {
+    //   width: 1160,
+    //   height: 640,
+    // },
+    // max: {
+    //   width: 1160,
+    //   height: 2040,
+    // }, // orientation: Phaser.Scale.Orientation.PORTRAIT,
   },
   scene: MyGame,
 };
