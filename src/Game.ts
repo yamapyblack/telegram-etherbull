@@ -21,34 +21,34 @@ class MyGame extends Phaser.Scene {
 
   create() {
     this.add
-      .text(580, 180, "ETHER BULL v1", {
+      .text(580, 160, "ETHER BULL v1", {
         fontSize: "156px",
         color: "#ffffff",
-        fontFamily: "Londrina Solid",
+        fontFamily: "sans-serif",
       })
       .setOrigin(0.5, 0.5);
     this.add
-      .text(220, 520, "ETH will be", {
+      .text(160, 500, "ETH will be", {
         fontSize: "78px",
         color: "#ffffff",
-        fontFamily: "Londrina Solid",
+        fontFamily: "sans-serif",
       })
       .setOrigin(0, 1);
     this.priceText = this.add
-      .text(940, 520, "$" + this.price, {
+      .text(1000, 500, "$" + this.price, {
         fontSize: "120px",
         color: "#ffffff",
-        fontFamily: "Londrina Solid",
+        fontFamily: "sans-serif",
       })
       .setOrigin(1, 1);
     this.ethereumImage = this.add
-      .image(580, 620, "ethereum_is_good")
+      .image(580, 600, "ethereum_is_good")
       .setOrigin(0.5, 0);
     this.ethereumImage.setInteractive();
     this.ethereumImage.on("pointerdown", this.onImageClick, this);
 
     this.arrowText = this.add
-      .text(580, 580, "↑", {
+      .text(0, 0, "↑", {
         fontSize: "72px",
         color: "#ffffff",
       })
@@ -100,7 +100,7 @@ const config: Phaser.Types.Core.GameConfig = {
   // height: 600,
   scale: {
     mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
+    autoCenter: Phaser.Scale.CENTER_HORIZONTALLY,
     parent: "phaser",
     width: "1160",
     height: "2040",
