@@ -1,6 +1,8 @@
 // src/Game.ts
 import Phaser from "phaser";
 
+const LOCAL_STORAGE_KEY = "etherbull";
+
 class MyGame extends Phaser.Scene {
   private price = 1;
   private priceText: Phaser.GameObjects.Text;
@@ -10,6 +12,7 @@ class MyGame extends Phaser.Scene {
 
   constructor() {
     super("game");
+    this.price = Number(localStorage.getItem(LOCAL_STORAGE_KEY)) || 1;
   }
 
   preload() {
@@ -21,7 +24,7 @@ class MyGame extends Phaser.Scene {
 
   create() {
     this.add
-      .text(580, 160, "ETHER BULL v1", {
+      .text(580, 160, "ETHER BULL v2", {
         fontSize: "156px",
         color: "#ffffff",
         fontFamily: "sans-serif",
@@ -73,6 +76,7 @@ class MyGame extends Phaser.Scene {
     // Increase price
     this.price++;
     this.priceText.setText("$" + this.price);
+    localStorage.setItem(LOCAL_STORAGE_KEY, this.price.toString());
 
     const newArrow = this.add
       .text(pointer.x, pointer.y, "up↑", {
