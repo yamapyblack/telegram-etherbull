@@ -21,7 +21,7 @@ class MyGame extends Phaser.Scene {
 
   create() {
     this.add
-      .text(580, 180, "ETHER BULL", {
+      .text(580, 180, "ETHER BULL v1", {
         fontSize: "156px",
         color: "#ffffff",
         fontFamily: "Londrina Solid",
@@ -100,7 +100,7 @@ const config: Phaser.Types.Core.GameConfig = {
   // height: 600,
   scale: {
     mode: Phaser.Scale.FIT,
-    // autoCenter: Phaser.Scale.CENTER_BOTH,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
     parent: "phaser",
     width: "1160",
     height: "2040",
