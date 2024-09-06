@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-// import WebApp from "@twa-dev/sdk";
+import WebApp from "@twa-dev/sdk";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -90,15 +90,27 @@ function App() {
             />
           </div>
         </div>
-        <h2 style={{ fontSize: "32px" }}>TAP ↑↑↑</h2>
+        <div className="username" style={{ color: "white" }}>
+          <p>Username: {WebApp.initDataUnsafe?.user?.username || "Guest"}</p>
+          <p>{WebApp.initDataUnsafe?.user?.id || "000"}</p>
+          <p>
+            <img
+              src={WebApp.initDataUnsafe?.user?.photo_url}
+              alt="user"
+              style={{ width: "50px", height: "50px", borderRadius: "50%" }}
+            />
+          </p>
+        </div>
 
-        {/* <div className="card">
-        <button
-          onClick={() => WebApp.showAlert(`Congrats! ETH will be $${count}!`)}
-        >
-          Exit
-        </button>
-      </div> */}
+        <div className="card">card</div>
+
+        <div className="card">
+          <button
+            onClick={() => WebApp.showAlert(`Congrats! ETH will be $${count}!`)}
+          >
+            Exit
+          </button>
+        </div>
       </div>
     </div>
   );
