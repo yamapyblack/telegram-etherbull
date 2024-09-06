@@ -24,7 +24,7 @@ class MyGame extends Phaser.Scene {
 
   create() {
     this.add
-      .text(580, 160, "ETHER BULL v2", {
+      .text(580, 160, "ETHER BULL", {
         fontSize: "156px",
         color: "#ffffff",
         fontFamily: "sans-serif",
